@@ -22,6 +22,8 @@
 
     <link rel="icon" href="../Assets/download.svg" type="image/x-icon">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -167,7 +169,7 @@
                                 <div class="basic_heading">Show device name</div>
                                 <div class="checkbox">
                                     <label class="switch">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -180,7 +182,7 @@
                                 <div class="basic_heading">Use native status bar</div>
                                 <div class="checkbox">
                                     <label class="switch">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -207,47 +209,50 @@
                             <div class="a_heading">Hide App Label</div>
                             <div class="a_label">
                                 <label class="switch">
-                                    <input type="checkbox" checked>
+                                    <!-- <input type="checkbox"  onclick="switchVisible();"> -->
+                                    <input type="checkbox" onclick="myFunction();">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
                         </div>
-                        <div class="advance_third_part">
-                            <div class="a_heading">App Icon Text Color</div>
-                            <div class="advance_color_selector">
-                                <div class="advance_color"><input type="color"></div>
-                                <div class="color_link"><a href="/"> (Change) </a></div>
-                            </div>
+                        <div class="functionality" id="display">
+                            <div class="advance_third_part">
+                                <div class="a_heading">App Icon Text Color</div>
+                                <div class="advance_color_selector">
+                                    <div class="advance_color"><input type="color"></div>
+                                    <div class="color_link"><a href="/"> (Change) </a></div>
+                                </div>
 
-                        </div>
-                        <div class="advance_third_part">
-                            <div class="a_heading">App Icon Label Color</div>
-                            <div class="advance_color_selector">
-                                <div class="advance_color"><input type="color"></div>
-                                <div class="color_link"><a href="/"> (Change) </a></div>
                             </div>
-
+                            <div class="advance_third_part">
+                                <div class="a_heading">App Icon Label Color</div>
+                                <div class="advance_color_selector">
+                                    <div class="advance_color"><input type="color"></div>
+                                    <div class="color_link"><a href="/"> (Change) </a></div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="advance_forth_part">
                             <div class="a_heading">Delay in Bootup Animation Sound (in ms)</div>
                             <div class="input_number"><input type="number" placeholder="80"></div>
                         </div>
-                        <div class="advance_fifth_part">
-                            <div class="a_heading">Hide App Label Shadow</div>
-                            <div class="a_label">
-                                <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
+                            <div class="advance_fifth_part">
+                                <div class="a_heading">Hide App Label Shadow</div>
+                                <div class="a_label">
+                                    <label class="switch">
+                                        <input type="checkbox" value="Click">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                          </div>
+
                         <div class="advance_sixth_part">
                             <div class="flx_sixth">
                                 <div class="a_heading">Browser Shortcut Branding</div>
                                 <div class="a_label">
                                     <label class="switch">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -259,7 +264,7 @@
                                 <div class="a_heading">Transparent Top Bar</div>
                                 <div class="a_label">
                                     <label class="switch">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -539,13 +544,14 @@
                     </div>
                     <div class="border"></div>
                     <div class="display_para">
-                       <p> Preview of your branding can be seen on the device below. You can customise according to your brand and needs.</p>
-                       <img src="../Assets/tab.png" alt="Internet error">
-                       <div class="tab_image">
-                           <img src="../Assets/tablet/tab-back.png" alt="">
+                        <p> Preview of your branding can be seen on the device below. You can customise according to
+                            your brand and needs.</p>
+                        <img src="../Assets/tab.png" alt="Internet error">
+                        <div class="tab_image">
+                            <img src="../Assets/tablet/tab-back.png" alt="">
                         </div>
                     </div>
-            
+
                 </div>
 
             </div>
@@ -624,6 +630,30 @@
             document.getElementById(subTab).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+        // ************************** JS function  *********************
+
+        function myFunction() {
+            if (document.getElementById('display').style.display == 'none') {
+
+                document.getElementById('display').style.display = 'block';
+            }
+
+            else {
+                document.getElementById('display').style.display = 'none';
+            }
+
+        }
+        // ************** Toggle fuction *****************
+
+        // function myFunction() {
+        //     var x = document.getElementById("display");
+        //     if (x.style.display === "none") {
+        //         x.style.display = "block";
+        //     } else {
+        //         x.style.display = "none";
+        //     }
+        // }
 
     </script>
 </body>
