@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalefusion</title>
+    <link rel="icon" href="../Assets/download.svg" type="image/x-icon">
+
+    <!-- ******************* Link  CSS ************************* -->
+
+    <link rel="stylesheet" href="Create.css">
+
+    <!-- ******************* Link Font-awesome ********************** -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ******************* Link title image ********************** -->
+
+    <link rel="icon" href="../Assets/download.svg" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="create_container">
+        <!-- ******************* Header ******************** -->
+        <div class="header">
+            <div class="Branding_heading">
+                <span>Breanding</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <a>New Brand</a>
+                <p>Personalize the colors and wallpapers of your devices</p>
+            </div>
+            <div class="save_button">
+                <a>Save Brand</a>
+            </div>
+        </div>
+
+        <!-- ******************* Accordion ******************** -->
+        <div class="tab">
+            <button class="tablinks mainTabsLinks" onclick="openMainTab(event, 'General')">General</button>
+            <button class="tablinks mainTabsLinks" id="android_btn"
+                onclick="openMainTab(event, 'Android')">Android</button>
+            <button class="tablinks mainTabsLinks" onclick="openMainTab(event, 'iOS')">iOS</button>
+            <button class="tablinks mainTabsLinks" onclick="openMainTab(event, 'Window 10')">Window 10</button>
+        </div>
+
+        <!-- ******************* General Tab******************** -->
+
+        <div id="General" class="tabcontent">
+            <div class="left_box">
+                <h3>General</h3>
+                <p>General </p>
+            </div>
+        </div>
+
+        <!-- ******************* Andoid Tab******************** -->
+
+        <div id="Android" class="tabcontent">
+            <div class="left_box">
+                <div class="android">
+                    <div class="android_tab">
+                        <button class="tablinks subTabLinks" onclick="openSubTab(event, 'Basic')">Basic</button>
+                        <button class="tablinks subTabLinks" onclick="openSubTab(event, 'Advance')">Advance</button>
+                        <button class="tablinks subTabLinks" onclick="openSubTab(event, 'OEM SDK')">OEM SDK</button>
+                        <button class="tablinks subTabLinks" onclick="openSubTab(event, 'Alert Sounds')">Alert
+                            Sounds</button>
+                    </div>
+                </div>
+
+                <!-- ******************* Basic Tab inside Android tab ******************** -->
+
+                <div id="Basic" class="android_tabcontent">
+
+                    <div class="sections">
+                        <div class="fisrt_section">
+                            <div class="basic_heading">Top Bar Color</div>
+                            <div class="select_color">
+                                <div class="color"><input type="color"></div>
+                                <div class="color_link"><a href="/"> (Change) </a></div>
+                            </div>
+                        </div>
+                        <div class="second_section">
+                            <div class="basic_heading">Upload Logo</div>
+                            <div class="upload_file">
+                                <div class="tab-content">
+                                    <div id="sectionC" class="tab-pane fade">
+                                        <div class="upload_card_vt">
+                                            <form action="#type your action here" method="POST"
+                                                enctype="multipart/form-data" name="myForm">
+                                                <div class="upload" onclick="getFile()">
+                                                    <img src="../Assets/upload.svg">
+                                                    <div id="yourBtn">Brand Logo <br>192x192
+                                                    </div>
+                                                    <!-- this is your file input tag, so i hide it!-->
+                                                    <!-- i used the onchange event to fire the form submission-->
+                                                    <div style='height: 0px;width: 0px; overflow:hidden;'><input
+                                                            id="upfile" type="file" value="upload"
+                                                            onchange="sub(this)" /></div>
+                                                    <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                                    <!-- <input type="submit" value='submit' > -->
+                                                </div>
+                                            </form>
+                                            <form action="#type your action here" method="POST"
+                                                enctype="multipart/form-data" name="myForm">
+                                                <div class="upload" onclick="getFile()">
+                                                    <img src="../Assets/upload.svg">
+                                                    <div id="yourBtn">Lock Screen Logo <br> 256x256
+                                                    </div>
+                                                    <!-- this is your file input tag, so i hide it!-->
+                                                    <!-- i used the onchange event to fire the form submission-->
+                                                    <div style='height: 0px;width: 0px; overflow:hidden;'><input
+                                                            id="upfile" type="file" value="upload"
+                                                            onchange="sub(this)" /></div>
+                                                    <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                                    <!-- <input type="submit" value='submit' > -->
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="third_section">
+                            <div class="flex_heading1">
+                                <div class="basic_heading">Upload Wallpaper</div>
+                                <div class="checkbox">
+                                    <input type="checkbox">
+                                    <div class="label">Use same for Lock screen</div>
+                                </div>
+                            </div>
+                            <div class="upload_card_vt">
+                                <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                    name="myForm">
+                                    <div class="upload" onclick="getFile()">
+                                        <img src="../Assets/upload.svg">
+                                        <div id="yourBtn">Home Screen <br> Wallpaper <br> 2500x2500
+                                        </div>
+                                        <!-- this is your file input tag, so i hide it!-->
+                                        <!-- i used the onchange event to fire the form submission-->
+                                        <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                type="file" value="upload" onchange="sub(this)" /></div>
+                                        <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                        <!-- <input type="submit" value='submit' > -->
+                                    </div>
+                                </form>
+                                <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                    name="myForm">
+                                    <div class="upload" onclick="getFile()">
+                                        <img src="../Assets/upload.svg">
+                                        <div id="yourBtn">Lock Screen<br> Wallpaper <br> 2500x2500
+                                        </div>
+                                        <!-- this is your file input tag, so i hide it!-->
+                                        <!-- i used the onchange event to fire the form submission-->
+                                        <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                type="file" value="upload" onchange="sub(this)" /></div>
+                                        <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                        <!-- <input type="submit" value='submit' > -->
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="flex_heading2">
+                                <div class="basic_heading">Show device name</div>
+                                <div class="checkbox">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="footer_section">
+                            <div class="flex_heading3">
+                                <div class="basic_heading">Use native status bar</div>
+                                <div class="checkbox">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ******************* Advance Tab inside Android tab ******************** -->
+
+                <div id="Advance" class="android_tabcontent">
+                    <div class="advance_container">
+                        <div class="advance_first_part">
+                            <div class="a_heading">Icon Size</div>
+                            <div class="a_icons">
+                                <img src="../Assets/Advance tab/1.svg" alt="">
+                                <img src="../Assets/Advance tab/2.svg" alt="">
+                                <img src="../Assets/Advance tab/3.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="advance_second_part">
+                            <div class="a_heading">Hide App Label</div>
+                            <div class="a_label">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="advance_third_part">
+                            <div class="a_heading">App Icon Text Color</div>
+                            <div class="advance_color_selector">
+                                <div class="advance_color"><input type="color"></div>
+                                <div class="color_link"><a href="/"> (Change) </a></div>
+                            </div>
+
+                        </div>
+                        <div class="advance_third_part">
+                            <div class="a_heading">App Icon Label Color</div>
+                            <div class="advance_color_selector">
+                                <div class="advance_color"><input type="color"></div>
+                                <div class="color_link"><a href="/"> (Change) </a></div>
+                            </div>
+
+                        </div>
+
+                        <div class="advance_forth_part">
+                            <div class="a_heading">Delay in Bootup Animation Sound (in ms)</div>
+                            <div class="input_number"><input type="number" placeholder="80"></div>
+                        </div>
+                        <div class="advance_fifth_part">
+                            <div class="a_heading">Hide App Label Shadow</div>
+                            <div class="a_label">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="advance_sixth_part">
+                            <div class="flx_sixth">
+                                <div class="a_heading">Browser Shortcut Branding</div>
+                                <div class="a_label">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p>Use Scalefusion branding for browser shortcuts</p>
+                        </div>
+                        <div class="advance_seventh_part">
+                            <div class="flx_seventh">
+                                <div class="a_heading">Transparent Top Bar</div>
+                                <div class="a_label">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p>Hide top bar and Device Name will not display on the device.</p>
+                        </div>
+                        <div class="advance_eight_part">
+                            <div class="a_heading">App Icons Per Row</div>
+                            <div class="flx_eight_part">
+                                <div class="flx_eight">
+                                    <div class="m_heading">Landscape Mode <br><span>Only For Tablets</span></div>
+                                    <div class="m_label">
+                                        <form action="/action_page.php">
+                                            <select name="option" id="option">
+                                                <option value="volvo">2</option>
+                                                <option value="saab">3</option>
+                                                <option value="opel">4</option>
+                                            </select>
+                                            <br><br>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="flx_eight">
+                                    <div class="l_heading">Portrait Mode</div>
+                                    <div class="m_label">
+                                        <form action="/action_page.php">
+                                            <select name="option" id="option">
+                                                <option value="volvo">2</option>
+                                                <option value="saab">3</option>
+                                            </select>
+                                            <br><br>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="advance_button">
+                                <button>Reset To Default</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ******************* OEM Tab inside Android tab ******************** -->
+
+                <div id="OEM SDK" class="android_tabcontent">
+                    <div class="oem_container">
+                        <div class="oem_heading">
+                            <p>Boot and Shutdown Animation</p>
+                            <img src="../Assets/oem/leno.png" alt="">
+                            <img src="../Assets/oem/sam.png" alt="">
+                            <img src="../Assets/oem/acer.svg" alt="">
+                        </div>
+                        <div class="oem_first">
+                            <div class="oem_heading">Lenovo & Acer Devices</div>
+                            <div class="alert_box">
+                                <div class="alert_logo"><img src="../Assets/Alert/info.svg" alt=""></div>
+                                <p>Note: These are OEM/Device specific settings and works with Lenovo & Acer devices
+                                    only.
+                                    For Acer this feature works only on Acer One 8 T4-82L. <a
+                                        href="https://android.googlesource.com/platform/frameworks/base/+/master/cmds/bootanimation/FORMAT.md">Get
+                                        help
+                                    </a> to generate zip animation file. <br>Animation once applied can be replaced from
+                                    device and cannot be removed.</p>
+                            </div>
+                            <div class="oem_second_part">
+                                <div class="s_heading">Boot Animation <br>Settings</div>
+                                <div class="s_heading">Shutdown Animation <br>Settings</div>
+                            </div>
+                            <div class="upload_card_vt">
+                                <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                    name="myForm">
+                                    <div class="upload" onclick="getFile()">
+                                        <img src="../Assets/upload.svg">
+                                        <div id="yourBtn">Upload Boot <br> Animation (*.zip)
+                                        </div>
+                                        <!-- this is your file input tag, so i hide it!-->
+                                        <!-- i used the onchange event to fire the form submission-->
+                                        <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                type="file" value="upload" onchange="sub(this)" /></div>
+                                        <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                        <!-- <input type="submit" value='submit' > -->
+                                    </div>
+                                </form>
+                                <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                    name="myForm">
+                                    <div class="upload" onclick="getFile()">
+                                        <img src="../Assets/upload.svg">
+                                        <div id="yourBtn">Upload Shutdown <br>Animation(*.zip)
+                                        </div>
+                                        <!-- this is your file input tag, so i hide it!-->
+                                        <!-- i used the onchange event to fire the form submission-->
+                                        <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                type="file" value="upload" onchange="sub(this)" /></div>
+                                        <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                        <!-- <input type="submit" value='submit' > -->
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="third_part">
+                                <div class="oem_heading">Samsung Devices</div>
+                                <div class="alert_box">
+                                    <div class="alert_logo"><img src="../Assets/Alert/info.svg" alt=""></div>
+                                    <p>Note: These are OEM/Device specific settings and works with Samsung devices with
+                                        Knox
+                                        v2.6 or later only. <a
+                                            href="https://docs.samsungknox.com/dev/knox-sdk/create-custom-animations.htm">Get
+                                            help </a> to generate animation files and
+                                        audio files.</p>
+                                </div>
+                            </div>
+                            <div class="forth_part">
+                                <div class="blur_heading">Boot Animation Settings</div>
+
+                                <div class="upload_card_vt">
+
+                                    <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                        name="myForm">
+                                        <div class="upload" onclick="getFile()">
+                                            <img src="../Assets/upload.svg">
+                                            <div id="yourBtn">Upload Bootup <br> Animation <br> (*.qmg)
+                                            </div>
+                                            <!-- this is your file input tag, so i hide it! -->
+                                            <!-- i used the onchange event to fire the form submission-->
+                                            <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                    type="file" value="upload" onchange="sub(this)" /></div>
+                                            <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                            <!-- <input type="submit" value='submit' > -->
+                                        </div>
+                                    </form>
+
+                                    <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                        name="myForm">
+                                        <div class="upload" onclick="getFile()">
+                                            <img src="../Assets/upload.svg">
+                                            <div id="yourBtn">Upload Bootloop <br> Animation <br> (*.qmg)
+                                            </div>
+                                            <!-- this is your file input tag, so i hide it!-->
+                                            <!-- i used the onchange event to fire the form submission-->
+                                            <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                    type="file" value="upload" onchange="sub(this)" /></div>
+                                            <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                            <!-- <input type="submit" value='submit' > -->
+                                        </div>
+                                    </form>
+
+                                    <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                        name="myForm">
+                                        <div class="upload" onclick="getFile()">
+                                            <img src="../Assets/upload.svg">
+                                            <div id="yourBtn">Upload Bootup<br> Animation sound <br> (*.ogg)
+                                            </div>
+                                            <!-- this is your file input tag, so i hide it!-->
+                                            <!-- i used the onchange event to fire the form submission-->
+                                            <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                    type="file" value="upload" onchange="sub(this)" /></div>
+                                            <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                            <!-- <input type="submit" value='submit' > -->
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="fifth_part">
+                                <div class="o_heading">App Icon Label Transparency</div>
+                                <div class="o_input"><input type="number" placeholder="0"></div>
+                            </div>
+
+                            <div class="forth_part">
+                                <div class="blur_heading">Shutdown Animation Settings</div>
+                                <div class="upload_card_vt">
+                                    <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                        name="myForm">
+                                        <div class="upload" onclick="getFile()">
+                                            <img src="../Assets/upload.svg">
+                                            <div id="yourBtn">Upload Shutdown <br> Animation<br> (*.qmg)
+                                            </div>
+                                            <!-- this is your file input tag, so i hide it!-->
+                                            <!-- i used the onchange event to fire the form submission-->
+                                            <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                    type="file" value="upload" onchange="sub(this)" /></div>
+                                            <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                            <!-- <input type="submit" value='submit' > -->
+                                        </div>
+                                    </form>
+                                    <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                        name="myForm">
+                                        <div class="upload" onclick="getFile()">
+                                            <img src="../Assets/upload.svg">
+                                            <div id="yourBtn">Upload Shutdown <br> Animation Sound<br> (*.ogg)
+                                            </div>
+                                            <!-- this is your file input tag, so i hide it!-->
+                                            <!-- i used the onchange event to fire the form submission-->
+                                            <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                    type="file" value="upload" onchange="sub(this)" /></div>
+                                            <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                            <!-- <input type="submit" value='submit' > -->
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ******************* Alert Tab inside Android tab ******************** -->
+
+                <div id="Alert Sounds" class="android_tabcontent">
+                    <div class="alert_container">
+                        <div class="alert_heading">Configure Alert Sounds </div>
+                        <div class="alert_box">
+                            <div class="alert_logo"><img src="../Assets/Alert/info.svg" alt=""></div>
+                            <p>Note: These sounds will be used to alert the user. This depends on if they can be
+                                downloaded
+                                to the device and the format is compatible.</p>
+                        </div>
+                        <div class="upload_images">
+                            <div class="upload_card_vt">
+                                <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                    name="myForm">
+                                    <div class="upload" onclick="getFile()">
+                                        <img src="../Assets/upload.svg">
+                                        <div id="yourBtn">Upload Buzz alert <br> sound file (*.ogg)
+                                        </div>
+                                        <!-- this is your file input tag, so i hide it! -->
+                                        <!-- i used the onchange event to fire the form submission-->
+                                        <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                type="file" value="upload" onchange="sub(this)" /></div>
+                                        <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                        <!-- <input type="submit" value='submit' > -->
+                                    </div>
+                                </form>
+
+                                <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                    name="myForm">
+                                    <div class="upload" onclick="getFile()">
+                                        <img src="../Assets/upload.svg">
+                                        <div id="yourBtn">Upload Broadcast <br> message alert <br> sound file (*.ogg)
+                                        </div>
+                                        <!-- this is your file input tag, so i hide it!-->
+                                        <!-- i used the onchange event to fire the form submission-->
+                                        <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                type="file" value="upload" onchange="sub(this)" /></div>
+                                        <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                        <!-- <input type="submit" value='submit' > -->
+                                    </div>
+                                </form>
+                                <form action="#type your action here" method="POST" enctype="multipart/form-data"
+                                    name="myForm">
+                                    <div class="upload" onclick="getFile()">
+                                        <img src="../Assets/upload.svg">
+                                        <div id="yourBtn">Upload Workflow <br> alert sound file br (*.ogg)
+                                        </div>
+                                        <!-- this is your file input tag, so i hide it!-->
+                                        <!-- i used the onchange event to fire the form submission-->
+                                        <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile"
+                                                type="file" value="upload" onchange="sub(this)" /></div>
+                                        <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                                        <!-- <input type="submit" value='submit' > -->
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_box">
+                <div class="display_container">
+                    <div class="display_heading">
+                        <img src="../Assets/tablet/tablet.svg" alt="Internet error">
+                        <p>Device Preview</p>
+                    </div>
+                    <div class="border"></div>
+                    <div class="display_para">
+                       <p> Preview of your branding can be seen on the device below. You can customise according to your brand and needs.</p>
+                       <img src="../Assets/tab.png" alt="Internet error">
+                       <div class="tab_image">
+                           <img src="../Assets/tablet/tab-back.png" alt="">
+                        </div>
+                    </div>
+            
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- ******************* IOS Tab******************** -->
+
+        <div id="iOS" class="tabcontent">
+            <h3>iOS</h3>
+            <p>iOS </p>
+        </div>
+
+        <!-- ******************* Windows 10******************** -->
+
+        <div id="Window 10" class="tabcontent">
+            <h3>Window 10</h3>
+            <p>Window 10 </p>
+        </div>
+
+    </div>
+
+
+    <!-- ******************* Javascript ********************** -->
+
+    <script>
+        let default_active_tabs = document.getElementsByClassName("mainTabsLinks")
+        default_active_tabs[1].click()
+
+        let default_active_sub_tabs = document.getElementsByClassName("subTabLinks")
+        default_active_sub_tabs[0].click()
+
+        // ************************** JS function for Accordian *********************
+
+        function openMainTab(evt, Tabs) {
+
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(Tabs).style.display = "grid";
+            evt.currentTarget.className += " active";
+        }
+
+        // ************************** JS function for Sub Tabs *********************
+
+        function openSubTab(evt, subTab) {
+
+            var i, allSubTabsLinks, allSubTabs;
+
+            allSubTabs = document.getElementsByClassName("android_tabcontent");
+            for (i = 0; i < allSubTabs.length; i++) {
+                allSubTabs[i].style.display = "none";
+            }
+
+            allSubTabsLinks = document.getElementsByClassName("subTabLinks");
+            for (i = 0; i < allSubTabsLinks.length; i++) {
+                allSubTabsLinks[i].className = allSubTabsLinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(subTab).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
+</body>
+
+
+<!-- ******************** Javascript for upload image **************** -->
+<script>
+    function getFile() {
+        document.getElementById("upfile").click();
+    }
+
+    function sub(obj) {
+
+        var file = obj.value;
+        var fileName = file.split("\\");
+        document.getElementById("upload").innerHTML = fileName[fileName.length - 1];
+        document.myForm.submit();
+        event.preventDefault();
+    }
+</script>
+
+</html>

@@ -1,0 +1,775 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* ******************* Header ******************** */
+
+.create_container {
+  height: 120vh;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgb(241, 241, 241);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Branding_heading {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.Branding_heading span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #256BFF;
+}
+
+.Branding_heading i {
+  color: #256BFF;
+  padding: 0 5px;
+  font-size: 15px;
+}
+
+.Branding_heading p {
+  text-transform: none;
+  margin: 7px 0 10px 0;
+  font-size: 13px;
+  font-weight: 430;
+  color: rgb(82, 79, 79);
+}
+
+.save_button a {
+  text-decoration: none;
+  font-size: 14px;
+  height: 42px;
+  padding: 6px 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  background-color: #256BFF;
+  margin-right: 2rem;
+}
+
+/* ******************* Accordin ******************** */
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  background-color: white;
+  padding: 0rem 2rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 25px 30px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: rgb(94, 91, 91);
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: black;
+  border-bottom: 3px solid blue;
+}
+
+
+/* Style the Android tab content */
+
+.tabcontent {
+  display: none;
+  
+}
+
+.left_box , .right_box{
+  padding: 6px 12px;
+  border-top: none;
+  height: 70vh;
+  border-radius: 0.5rem;
+  background-color: white;
+  border: none;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.left_box::-webkit-scrollbar{
+  display: none;
+}
+.right_box::-webkit-scrollbar{
+  display: none;
+}
+
+#Android{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+
+
+.android {
+  display: flex;
+  justify-content: center;
+}
+
+.android_tab {
+  width: 70%;
+  overflow: hidden;
+  background-color: #E0E9FE;
+  border-radius: 5px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+
+}
+
+.android_tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 3px 5px;
+  padding: 7px 20px;
+  transition: 0.5s;
+  font-size: 13px;
+  color: rgb(94, 91, 91);
+}
+
+.android_tab button.active {
+  color: black;
+}
+ 
+
+.android_tab button:hover {
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Create an active/current tablink class */
+.android_tab button.active {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.android_tabcontent {
+  display: none;
+  padding: 6px 0px;
+  border-top: none;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* ************************ Sections ********************* */
+.sections {
+  padding: 0 1rem 0 .5rem;
+}
+
+.basic_heading {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 135%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.fisrt_section {
+  border-bottom: 1px solid rgb(226, 226, 226);
+
+}
+
+.select_color {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.color input {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+.color_link a {
+  color: #256BFF;
+  text-decoration: none;
+
+}
+
+.tab-content {
+  width: 620px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* ******************************* */
+.second_section {
+  border-bottom: 1px solid rgb(226, 226, 226);
+  padding-top: 1rem;
+
+}
+
+.upload_card_vt {
+  display: flex;
+  margin: 1rem 0;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+#yourBtn {
+  position: relative;
+  /*top: 150px;
+*/
+  font-family: calibri;
+  /*width: 125px;
+      height: 125px;*/
+  padding: 10px 0;
+  /*-webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border: 1px dashed #256BFF;
+      text-align: center;
+      background-color: #F6F9FB;
+      cursor: pointer;*/
+  font-size: 12px;
+  line-height: 150%;
+  color: #1A142C;
+  height: 60%;
+  align-items: flex-start;
+}
+
+.upload img {
+  height: 16px;
+  width: 24px;
+  margin: 10px auto;
+}
+
+.upload {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px dashed #256BFF;
+  text-align: center;
+  background-color: #F6F9FB;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_heading1 {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.flex_heading2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+}
+
+.flex_heading3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+
+}
+
+.third_section {
+  border-bottom: 1px solid rgb(214, 214, 214);
+  padding-top: 1rem;
+
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+}
+
+.checkbox input {
+  height: 18px;
+  width: 18px;
+}
+
+
+
+/* ******************* Advance Tab inside Android tab ******************** - */
+.advance_container {
+  padding: 0 .5rem;
+}
+
+.advance_first_part {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.a_heading {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.a_icons {
+  display: flex;
+  gap: 2rem;
+}
+.a_icons img {
+  cursor: pointer;
+
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 15px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  left: 4px;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 0px;
+  bottom: -2px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: .4s;
+  transition: .4s;
+  /* box-shadow: 1px 1px 0px 0px #888888; */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 14px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* ************************************** */
+
+.advance_second_part {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(214, 214, 214);
+
+}
+
+/* ************************************** */
+
+.advance_third_part {
+  padding: 21px 0;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.advance_color_selector {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.advance_color input {
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
+/* ************************************** */
+
+.advance_forth_part {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.input_number input {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #b1bace;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 5px;
+  outline: none;
+}
+
+/* ************************************** */
+.advance_fifth_part {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(214, 214, 214);
+
+}
+
+/* ************************************** */
+.advance_sixth_part {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(214, 214, 214);
+
+}
+
+.flx_sixth {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.advance_sixth_part p {
+  color: #4c4c4c;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* ************************************** */
+
+.advance_seventh_part {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(214, 214, 214);
+
+}
+
+.flx_seventh {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.advance_seventh_part p {
+  color: #4c4c4c;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* ************************************** */
+.advance_eight_part {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px 0;
+
+}
+
+.flx_eight_part {
+  padding: 0 0 0 15px;
+}
+
+.flx_eight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m_heading {
+  font-size: 16px;
+  font-weight: 500 !important;
+  color: #1A142C;
+}
+
+#option {
+  max-height: 40px;
+  border: 1px solid #bac3d8;
+  border-radius: 4px;
+  padding: 7px 10px;
+  color: #6f6f6f;
+  font-weight: 430;
+  outline: navajowhite;
+}
+
+.m_heading span {
+  color: #4c4c4c;
+  font-size: 14px;
+  font-weight: 430;
+}
+
+.l_heading {
+  font-size: 16px;
+  font-weight: 500 !important;
+  color: #1A142C;
+  margin-top: -15px;
+}
+
+.advance_button button {
+  width: 100%;
+  color: #fff;
+  background-color: #256BFF;
+  height: 42px;
+  padding: 6px 15px;
+  border-radius: 2px;
+  border: navajowhite;
+  outline: none;
+  font-size: 15px !important;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  transition: 0.2s linear;
+
+}
+
+.advance_button button:hover {
+  background-color: #0754fa;
+
+}
+
+/* ***************** Alert tab inside Android tab********************* */
+.alert_container {
+  padding: 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.alert_heading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 135%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+
+}
+
+.alert_box {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 15px 10px;
+  background-color: #FBF0CD !important;
+  border-radius: 10px;
+}
+
+.alert_box p {
+  color: #1A142C !important;
+  font-size: 12px;
+}
+
+/* *****************OEM tab inside inside android tab********************* */
+
+.oem_container {
+  padding: 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.oem_heading p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 135%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.oem_heading {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.oem_heading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 135%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.margin {
+  margin-bottom: 1rem;
+
+}
+
+.alert_box a {
+  text-decoration: none;
+  color: #0754fa;
+}
+
+.oem_first {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.oem_second_part {
+  display: flex;
+  gap: 2rem;
+}
+
+.s_heading {
+  font-weight: 600;
+  font-size: 16px;
+  color: #6F6F6F;
+  line-height: 150%;
+}
+
+.blur_heading {
+  font-size: 16px;
+  color: #6F6F6F;
+  font-weight: 600;
+}
+
+.third_part {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fifth_part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.o_heading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 135%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.o_input input {
+
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #b9c0cf;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 5px;
+  outline: none;
+}
+
+/* ****************************************************** Right box *********************************************** */
+.display_container{
+  border-radius: 10px;
+  background-color: white;
+  
+}
+.display_heading{
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  gap: .6rem;
+  padding: 1rem .7rem ;
+}
+.border{
+  width: 100%;
+  border-bottom: 1px solid rgb(226, 224, 224);
+
+}
+.display_heading p{
+  font-weight: 600;
+  font-size: 16px;
+  color: #1A142C;
+}
+.display_para{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem .7rem ;
+  position: relative;
+
+}
+.display_para p{
+  font-size: 14px;
+  line-height: 150%;
+  color: #747474;
+}
+.display_para img{
+  height: 250px;
+
+}
+.tab_image img{
+  height: 200px;
+  height: 203px;
+  /* width: -webkit-fill-available; ; */
+}
+.tab_image{
+  position: absolute;
+  top: 115px;
+  left: 40px;
+}
