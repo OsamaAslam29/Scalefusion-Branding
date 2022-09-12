@@ -23,11 +23,15 @@
     <p id="demo"></p>
 
     <script>
+        //  **************** Js Function To add html in an empty div***************
 
-        // function showheading() {
+        function showheading() {
                 
-        //         document.getElementById("demo").innerHTML = "Yes Boss I'm  your heading";
-        // }
+                document.getElementById("demo").innerHTML = "Yes Boss I'm  your heading";
+        }
+
+
+        //  **************** Js Function To replace html in an empty div***************
 
         let text = document.getElementById("heading").innerHTML;
         document.getElementById("heading").innerHTML = text.replace("Click Here","Press");

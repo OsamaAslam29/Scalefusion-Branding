@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form enctype="multipart/form-data" method="POST">
+        <input type='file' name='f' onchange='validate(this)'>
+        <div id='lbError' class='warning'></div>
+        <input type='submit' onsubmit='return validate()' />
+    </form>
+
+    <script>
+        function validate(el) {
+            var maxfilesize = 192 * 192,
+                filesize = el.files[0].size,
+                warningel = document.getElementById('lbError');
+
+            if (filesize > maxfilesize) {
+                warningel.innerHTML = "File too large: " + filesize + ". Maximum size: " + maxfilesize;
+                return false;
+            }
+            else {
+                warningel.innerHTML = '';
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
