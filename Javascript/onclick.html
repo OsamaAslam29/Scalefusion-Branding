@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            text-align: center;
+            color: blue;
+            /* font-weight: 10px; */
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>heading</h3>
+    <p id="heading" onclick="showheading()">Click Here to see your Heading</p>
+    <p id="demo"></p>
+
+    <script>
+
+        // function showheading() {
+                
+        //         document.getElementById("demo").innerHTML = "Yes Boss I'm  your heading";
+        // }
+
+        let text = document.getElementById("heading").innerHTML;
+        document.getElementById("heading").innerHTML = text.replace("Click Here","Press");
+
+
+
+
+    </script>
+</body>
+
+</html>
